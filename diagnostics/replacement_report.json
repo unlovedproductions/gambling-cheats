@@ -1,0 +1,2335 @@
+{
+  "image_size": [
+    2160,
+    4800
+  ],
+  "validation": {
+    "passed": true,
+    "changed_pixels": 432230,
+    "allowed_pixels": 791324,
+    "unauthorized_changed_pixels": 0,
+    "image_pixels": 10368000,
+    "outside_mask_identical": true,
+    "box_boundary_problems": []
+  },
+  "boxes": [
+    {
+      "box_index": 1,
+      "outer_rect": [
+        72,
+        51,
+        306,
+        129
+      ],
+      "inner_rect": [
+        90,
+        69,
+        270,
+        93
+      ],
+      "status": "replaced",
+      "reason": "",
+      "font": "Ubuntu-B.ttf",
+      "font_size_px": 92,
+      "calibration_confidence": "ambiguous",
+      "original_ink_bbox_abs": [
+        95,
+        73,
+        351,
+        159
+      ],
+      "original_text": "3.45 AM",
+      "analysis_components": [
+        {
+          "bbox_rel": [
+            5,
+            5,
+            8,
+            8
+          ],
+          "area": 5,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            219,
+            4,
+            236,
+            12
+          ],
+          "area": 86,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            10,
+            15,
+            45,
+            69
+          ],
+          "area": 1090,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            66,
+            15,
+            105,
+            66
+          ],
+          "area": 1089,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            108,
+            15,
+            144,
+            69
+          ],
+          "area": 1152,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            162,
+            15,
+            207,
+            66
+          ],
+          "area": 1224,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            210,
+            15,
+            261,
+            66
+          ],
+          "area": 1851,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            51,
+            27,
+            63,
+            39
+          ],
+          "area": 126,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            51,
+            57,
+            63,
+            69
+          ],
+          "area": 126,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            258,
+            68,
+            260,
+            73
+          ],
+          "area": 9,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            66,
+            81,
+            106,
+            90
+          ],
+          "area": 330,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            179,
+            81,
+            247,
+            90
+          ],
+          "area": 532,
+          "status": "text"
+        }
+      ],
+      "analysis_notes": [
+        "frame residue left untouched (depth px): {'top': 0, 'bottom': 0, 'left': 0, 'right': 9}",
+        "glyph tips in the interior edge band removed: 87 px",
+        "frame residue removed (depth px): {'top': 0, 'bottom': 0, 'left': 0, 'right': 9}"
+      ],
+      "removal_pixels": 8361,
+      "interior_background_rgb": [
+        12,
+        28,
+        21
+      ],
+      "interior_text_rgb": [
+        255,
+        255,
+        255
+      ],
+      "solid_background": false,
+      "interior_palette": [
+        {
+          "rgb": [
+            12,
+            28,
+            21
+          ],
+          "fraction": 0.5464
+        },
+        {
+          "rgb": [
+            252,
+            253,
+            253
+          ],
+          "fraction": 0.1427
+        },
+        {
+          "rgb": [
+            19,
+            35,
+            28
+          ],
+          "fraction": 0.0801
+        },
+        {
+          "rgb": [
+            27,
+            42,
+            35
+          ],
+          "fraction": 0.055
+        },
+        {
+          "rgb": [
+            38,
+            52,
+            46
+          ],
+          "fraction": 0.0511
+        },
+        {
+          "rgb": [
+            141,
+            148,
+            145
+          ],
+          "fraction": 0.0278
+        }
+      ],
+      "replacement_text": "4:00 AM",
+      "tracking_em": -0.11,
+      "alignment": "center",
+      "baseline_abs_y": 157,
+      "replacement_ink_bbox_abs": [
+        90,
+        91,
+        358,
+        158
+      ],
+      "plan_notes": [
+        "tracking tightened + slid back inside the box",
+        "shrunk to 92px (ON_OVERFLOW='shrink')"
+      ],
+      "residual_old_ink_pixels": 1304
+    },
+    {
+      "box_index": 2,
+      "outer_rect": [
+        933,
+        549,
+        300,
+        300
+      ],
+      "inner_rect": [
+        951,
+        567,
+        264,
+        264
+      ],
+      "status": "replaced",
+      "reason": "",
+      "font": "Carlito-Bold.ttf",
+      "font_size_px": 111,
+      "calibration_confidence": "ambiguous",
+      "original_ink_bbox_abs": [
+        1050,
+        648,
+        1116,
+        720
+      ],
+      "original_text": "V",
+      "analysis_components": [
+        {
+          "bbox_rel": [
+            99,
+            81,
+            165,
+            153
+          ],
+          "area": 2232,
+          "status": "text"
+        }
+      ],
+      "analysis_notes": [],
+      "removal_pixels": 2267,
+      "interior_background_rgb": [
+        19,
+        57,
+        40
+      ],
+      "interior_text_rgb": [
+        255,
+        255,
+        255
+      ],
+      "solid_background": true,
+      "interior_palette": [
+        {
+          "rgb": [
+            19,
+            57,
+            40
+          ],
+          "fraction": 0.918
+        },
+        {
+          "rgb": [
+            12,
+            28,
+            21
+          ],
+          "fraction": 0.0269
+        },
+        {
+          "rgb": [
+            15,
+            39,
+            28
+          ],
+          "fraction": 0.0226
+        },
+        {
+          "rgb": [
+            253,
+            253,
+            253
+          ],
+          "fraction": 0.0221
+        },
+        {
+          "rgb": [
+            207,
+            215,
+            211
+          ],
+          "fraction": 0.0017
+        },
+        {
+          "rgb": [
+            39,
+            74,
+            58
+          ],
+          "fraction": 0.0012
+        }
+      ],
+      "replacement_text": "JH",
+      "tracking_em": 0.0,
+      "alignment": "center",
+      "baseline_abs_y": 735,
+      "replacement_ink_bbox_abs": [
+        1033,
+        663,
+        1134,
+        736
+      ],
+      "plan_notes": [
+        "calibrated typography"
+      ],
+      "residual_old_ink_pixels": 4674
+    },
+    {
+      "box_index": 3,
+      "outer_rect": [
+        787,
+        915,
+        590,
+        137
+      ],
+      "inner_rect": [
+        805,
+        933,
+        554,
+        101
+      ],
+      "status": "replaced",
+      "reason": "",
+      "font": "FiraSansCompressed-Medium.otf",
+      "font_size_px": 99,
+      "calibration_confidence": "ambiguous",
+      "original_ink_bbox_abs": [
+        808,
+        936,
+        1356,
+        1031
+      ],
+      "original_text": "Vikki Valdez",
+      "analysis_components": [
+        {
+          "bbox_rel": [
+            3,
+            3,
+            70,
+            81
+          ],
+          "area": 2292,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            95,
+            7,
+            218,
+            81
+          ],
+          "area": 5199,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            362,
+            7,
+            383,
+            84
+          ],
+          "area": 1182,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            386,
+            7,
+            440,
+            84
+          ],
+          "area": 2477,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            71,
+            9,
+            89,
+            24
+          ],
+          "area": 264,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            203,
+            9,
+            221,
+            24
+          ],
+          "area": 264,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            245,
+            9,
+            313,
+            81
+          ],
+          "area": 2234,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            71,
+            27,
+            86,
+            81
+          ],
+          "area": 801,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            305,
+            27,
+            359,
+            84
+          ],
+          "area": 2097,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            446,
+            27,
+            497,
+            84
+          ],
+          "area": 2052,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            500,
+            27,
+            548,
+            81
+          ],
+          "area": 1722,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            549,
+            70,
+            551,
+            81
+          ],
+          "area": 22,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            436,
+            89,
+            460,
+            98
+          ],
+          "area": 201,
+          "status": "text"
+        }
+      ],
+      "analysis_notes": [
+        "glyph tips in the interior edge band removed: 121 px"
+      ],
+      "removal_pixels": 21240,
+      "interior_background_rgb": [
+        13,
+        28,
+        21
+      ],
+      "interior_text_rgb": [
+        255,
+        255,
+        255
+      ],
+      "solid_background": true,
+      "interior_palette": [
+        {
+          "rgb": [
+            14,
+            28,
+            21
+          ],
+          "fraction": 0.4748
+        },
+        {
+          "rgb": [
+            253,
+            253,
+            253
+          ],
+          "fraction": 0.2476
+        },
+        {
+          "rgb": [
+            19,
+            35,
+            28
+          ],
+          "fraction": 0.1155
+        },
+        {
+          "rgb": [
+            26,
+            41,
+            35
+          ],
+          "fraction": 0.036
+        },
+        {
+          "rgb": [
+            175,
+            180,
+            178
+          ],
+          "fraction": 0.0209
+        },
+        {
+          "rgb": [
+            208,
+            211,
+            209
+          ],
+          "fraction": 0.0165
+        }
+      ],
+      "replacement_text": "Jeregkvhvj kjnb",
+      "tracking_em": -0.014499999999999999,
+      "alignment": "center",
+      "baseline_abs_y": 1013,
+      "replacement_ink_bbox_abs": [
+        805,
+        935,
+        1359,
+        1034
+      ],
+      "plan_notes": [
+        "tracking tightened + slid back inside the box",
+        "shrunk to 99px (ON_OVERFLOW='shrink')"
+      ],
+      "residual_old_ink_pixels": 3381
+    },
+    {
+      "box_index": 4,
+      "outer_rect": [
+        1023,
+        1046,
+        571,
+        110
+      ],
+      "inner_rect": [
+        1041,
+        1064,
+        535,
+        74
+      ],
+      "status": "replaced",
+      "reason": "",
+      "font": "NimbusSans-Regular.otf",
+      "font_size_px": 74,
+      "calibration_confidence": "ambiguous",
+      "original_ink_bbox_abs": [
+        1044,
+        1067,
+        1527,
+        1135
+      ],
+      "original_text": "SVikki-Valdez",
+      "analysis_components": [
+        {
+          "bbox_rel": [
+            3,
+            3,
+            51,
+            71
+          ],
+          "area": 1687,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            52,
+            3,
+            105,
+            61
+          ],
+          "area": 1298,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            105,
+            3,
+            119,
+            16
+          ],
+          "area": 146,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            124,
+            3,
+            165,
+            61
+          ],
+          "area": 1145,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            166,
+            3,
+            207,
+            61
+          ],
+          "area": 1152,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            207,
+            3,
+            221,
+            16
+          ],
+          "area": 146,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            249,
+            3,
+            302,
+            61
+          ],
+          "area": 1272,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            297,
+            3,
+            357,
+            69
+          ],
+          "area": 2301,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            357,
+            3,
+            401,
+            63
+          ],
+          "area": 1347,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            108,
+            19,
+            117,
+            61
+          ],
+          "area": 378,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            210,
+            19,
+            219,
+            61
+          ],
+          "area": 378,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            405,
+            19,
+            447,
+            63
+          ],
+          "area": 1233,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            450,
+            19,
+            486,
+            61
+          ],
+          "area": 972,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            225,
+            34,
+            252,
+            43
+          ],
+          "area": 243,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            416,
+            62,
+            417,
+            63
+          ],
+          "area": 1,
+          "status": "text"
+        }
+      ],
+      "analysis_notes": [
+        "glyph tips in the interior edge band removed: 295 px"
+      ],
+      "removal_pixels": 14512,
+      "interior_background_rgb": [
+        12,
+        28,
+        21
+      ],
+      "interior_text_rgb": [
+        166,
+        174,
+        171
+      ],
+      "solid_background": false,
+      "interior_palette": [
+        {
+          "rgb": [
+            13,
+            28,
+            21
+          ],
+          "fraction": 0.5219
+        },
+        {
+          "rgb": [
+            165,
+            173,
+            170
+          ],
+          "fraction": 0.1645
+        },
+        {
+          "rgb": [
+            18,
+            34,
+            27
+          ],
+          "fraction": 0.1166
+        },
+        {
+          "rgb": [
+            142,
+            151,
+            148
+          ],
+          "fraction": 0.041
+        },
+        {
+          "rgb": [
+            105,
+            115,
+            111
+          ],
+          "fraction": 0.0296
+        },
+        {
+          "rgb": [
+            27,
+            42,
+            35
+          ],
+          "fraction": 0.0273
+        }
+      ],
+      "replacement_text": "$jer-j-dad",
+      "tracking_em": -0.0431,
+      "alignment": "left",
+      "baseline_abs_y": 1122,
+      "replacement_ink_bbox_abs": [
+        1044,
+        1065,
+        1318,
+        1138
+      ],
+      "plan_notes": [
+        "slid back inside the box (same size)",
+        "shrunk to 74px (ON_OVERFLOW='shrink')"
+      ],
+      "residual_old_ink_pixels": 0
+    },
+    {
+      "box_index": 5,
+      "outer_rect": [
+        835,
+        2439,
+        490,
+        282
+      ],
+      "inner_rect": [
+        854,
+        2458,
+        452,
+        244
+      ],
+      "status": "replaced",
+      "reason": "",
+      "font": "NotoSansDisplay-Black.ttf",
+      "font_size_px": 244,
+      "calibration_confidence": "ambiguous",
+      "original_ink_bbox_abs": [
+        859,
+        2461,
+        1303,
+        2699
+      ],
+      "original_text": "-S5",
+      "analysis_components": [
+        {
+          "bbox_rel": [
+            136,
+            3,
+            274,
+            241
+          ],
+          "area": 17130,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            302,
+            3,
+            427,
+            12
+          ],
+          "area": 992,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            5,
+            5,
+            8,
+            8
+          ],
+          "area": 5,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            286,
+            29,
+            418,
+            212
+          ],
+          "area": 14166,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            37,
+            122,
+            121,
+            152
+          ],
+          "area": 2511,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            440,
+            122,
+            449,
+            178
+          ],
+          "area": 490,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            316,
+            232,
+            392,
+            241
+          ],
+          "area": 679,
+          "status": "text"
+        }
+      ],
+      "analysis_notes": [
+        "glyph tips in the interior edge band removed: 1283 px"
+      ],
+      "removal_pixels": 37555,
+      "interior_background_rgb": [
+        12,
+        28,
+        21
+      ],
+      "interior_text_rgb": [
+        255,
+        255,
+        255
+      ],
+      "solid_background": false,
+      "interior_palette": [
+        {
+          "rgb": [
+            12,
+            28,
+            21
+          ],
+          "fraction": 0.6457
+        },
+        {
+          "rgb": [
+            254,
+            254,
+            254
+          ],
+          "fraction": 0.2676
+        },
+        {
+          "rgb": [
+            205,
+            208,
+            207
+          ],
+          "fraction": 0.0135
+        },
+        {
+          "rgb": [
+            19,
+            34,
+            27
+          ],
+          "fraction": 0.0103
+        },
+        {
+          "rgb": [
+            173,
+            179,
+            176
+          ],
+          "fraction": 0.0094
+        },
+        {
+          "rgb": [
+            71,
+            83,
+            77
+          ],
+          "fraction": 0.0084
+        }
+      ],
+      "replacement_text": "-$15",
+      "tracking_em": -0.0223,
+      "alignment": "center",
+      "baseline_abs_y": 2687,
+      "replacement_ink_bbox_abs": [
+        855,
+        2501,
+        1306,
+        2702
+      ],
+      "plan_notes": [
+        "tracking tightened + slid back inside the box",
+        "shrunk to 244px (ON_OVERFLOW='shrink')"
+      ],
+      "residual_old_ink_pixels": 725
+    },
+    {
+      "box_index": 6,
+      "outer_rect": [
+        738,
+        2813,
+        695,
+        141
+      ],
+      "inner_rect": [
+        757,
+        2832,
+        657,
+        103
+      ],
+      "status": "replaced",
+      "reason": "",
+      "font": "Lato-SemiBold.ttf",
+      "font_size_px": 87,
+      "calibration_confidence": "ambiguous",
+      "original_ink_bbox_abs": [
+        762,
+        2836,
+        1407,
+        2901
+      ],
+      "original_text": "Jul 28at 345AM",
+      "analysis_components": [
+        {
+          "bbox_rel": [
+            5,
+            5,
+            9,
+            8
+          ],
+          "area": 7,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            611,
+            4,
+            619,
+            7
+          ],
+          "area": 14,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            14,
+            9,
+            56,
+            69
+          ],
+          "area": 1023,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            107,
+            9,
+            122,
+            69
+          ],
+          "area": 585,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            140,
+            9,
+            182,
+            66
+          ],
+          "area": 1340,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            185,
+            9,
+            230,
+            69
+          ],
+          "area": 1687,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            332,
+            9,
+            374,
+            69
+          ],
+          "area": 1426,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            395,
+            9,
+            443,
+            66
+          ],
+          "area": 1367,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            446,
+            9,
+            488,
+            69
+          ],
+          "area": 1467,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            503,
+            9,
+            560,
+            66
+          ],
+          "area": 1499,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            563,
+            9,
+            626,
+            66
+          ],
+          "area": 2363,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            628,
+            11,
+            629,
+            12
+          ],
+          "area": 1,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            287,
+            12,
+            317,
+            69
+          ],
+          "area": 810,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            62,
+            24,
+            101,
+            69
+          ],
+          "area": 1062,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            248,
+            24,
+            290,
+            69
+          ],
+          "area": 1179,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            377,
+            27,
+            392,
+            39
+          ],
+          "area": 171,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            645,
+            30,
+            650,
+            46
+          ],
+          "area": 50,
+          "status": "text"
+        },
+        {
+          "bbox_rel": [
+            377,
+            54,
+            392,
+            66
+          ],
+          "area": 162,
+          "status": "text"
+        }
+      ],
+      "analysis_notes": [],
+      "removal_pixels": 16640,
+      "interior_background_rgb": [
+        12,
+        28,
+        21
+      ],
+      "interior_text_rgb": [
+        166,
+        174,
+        171
+      ],
+      "solid_background": true,
+      "interior_palette": [
+        {
+          "rgb": [
+            12,
+            28,
+            21
+          ],
+          "fraction": 0.7084
+        },
+        {
+          "rgb": [
+            166,
+            174,
+            171
+          ],
+          "fraction": 0.1204
+        },
+        {
+          "rgb": [
+            18,
+            34,
+            27
+          ],
+          "fraction": 0.0501
+        },
+        {
+          "rgb": [
+            139,
+            148,
+            144
+          ],
+          "fraction": 0.0259
+        },
+        {
+          "rgb": [
+            40,
+            54,
+            48
+          ],
+          "fraction": 0.0151
+        },
+        {
+          "rgb": [
+            105,
+            116,
+            111
+          ],
+          "fraction": 0.015
+        }
+      ],
+      "replacement_text": "Nov 1 at 4:00 am",
+      "tracking_em": 0.0009000000000000015,
+      "alignment": "center",
+      "baseline_abs_y": 2900,
+      "replacement_ink_bbox_abs": [
+        761,
+        2836,
+        1408,
+        2901
+      ],
+      "plan_notes": [
+        "tracking tightened"
+      ],
+      "residual_old_ink_pixels": 0
+    }
+  ],
+  "calibration": [
+    {
+      "box_index": 1,
+      "original_text": "3.45 AM",
+      "font_size_scale": 1.0,
+      "text_color_rgb": [
+        255,
+        255,
+        255
+      ],
+      "background_rgb": [
+        12,
+        28,
+        21
+      ],
+      "original_ink_bbox_relative": [
+        5,
+        4,
+        261,
+        90
+      ],
+      "original_ink_width_px": 256,
+      "original_ink_height_px": 86,
+      "alignment": "center",
+      "contrast": 406.6,
+      "tracking_em": -0.08,
+      "word_spacing_em": 0.0,
+      "alternatives": [
+        {
+          "font_path": "/usr/share/fonts/truetype/ubuntu/UbuntuSans[wdth,wght].ttf",
+          "font_size": 119,
+          "stroke_width": 0,
+          "tracking_em": -0.08,
+          "score": 0.5464
+        },
+        {
+          "font_path": "/home/unloved/gambling-cheats/fonts/OpenSans_wdth_wght_.ttf",
+          "font_size": 115,
+          "stroke_width": 0,
+          "tracking_em": -0.08,
+          "score": 0.5485
+        },
+        {
+          "font_path": "/usr/share/fonts/truetype/open-sans/OpenSans-Regular.ttf",
+          "font_size": 116,
+          "stroke_width": 0,
+          "tracking_em": -0.08,
+          "score": 0.5531
+        }
+      ],
+      "ranking": [
+        {
+          "font": "Ubuntu Regular",
+          "path": "/usr/share/fonts/truetype/ubuntu/Ubuntu-B.ttf",
+          "score": 0.5464,
+          "errors": {
+            "width": 1.0,
+            "columns": 0.2971,
+            "rows": 0.3763,
+            "stroke": 0.2519,
+            "chamfer": 0.6198
+          },
+          "size_px": 119
+        },
+        {
+          "font": "Ubuntu Sans Regular",
+          "path": "/usr/share/fonts/truetype/ubuntu/UbuntuSans[wdth,wght].ttf",
+          "score": 0.5464,
+          "errors": {
+            "width": 1.0,
+            "columns": 0.2971,
+            "rows": 0.3763,
+            "stroke": 0.2519,
+            "chamfer": 0.6198
+          },
+          "size_px": 119
+        },
+        {
+          "font": "Open Sans Regular",
+          "path": "/home/unloved/gambling-cheats/fonts/OpenSans_wdth_wght_.ttf",
+          "score": 0.5485,
+          "errors": {
+            "width": 1.0,
+            "columns": 0.2211,
+            "rows": 0.4735,
+            "stroke": 0.3006,
+            "chamfer": 0.5727
+          },
+          "size_px": 115
+        },
+        {
+          "font": "Open Sans Regular",
+          "path": "/usr/share/fonts/truetype/open-sans/OpenSans-Regular.ttf",
+          "score": 0.5531,
+          "errors": {
+            "width": 1.0,
+            "columns": 0.2087,
+            "rows": 0.4811,
+            "stroke": 0.3355,
+            "chamfer": 0.5743
+          },
+          "size_px": 116
+        },
+        {
+          "font": "Noto Sans Light",
+          "path": "/usr/share/fonts/truetype/noto/NotoSans-Light.ttf",
+          "score": 0.5626,
+          "errors": {
+            "width": 1.0,
+            "columns": 0.2158,
+            "rows": 0.5051,
+            "stroke": 0.3013,
+            "chamfer": 0.616
+          },
+          "size_px": 118
+        },
+        {
+          "font": "Montserrat Regular",
+          "path": "/usr/share/fonts/truetype/montserrat/Montserrat-Regular.ttf",
+          "score": 0.5626,
+          "errors": {
+            "width": 1.0,
+            "columns": 0.2767,
+            "rows": 0.4638,
+            "stroke": 0.1872,
+            "chamfer": 0.6822
+          },
+          "size_px": 121
+        },
+        {
+          "font": "Noto Sans Display Light",
+          "path": "/usr/share/fonts/truetype/noto/NotoSansDisplay-Light.ttf",
+          "score": 0.5663,
+          "errors": {
+            "width": 1.0,
+            "columns": 0.2229,
+            "rows": 0.5037,
+            "stroke": 0.3124,
+            "chamfer": 0.6206
+          },
+          "size_px": 118
+        },
+        {
+          "font": "Montserrat Regular",
+          "path": "/usr/share/fonts/opentype/montserrat/Montserrat-Regular.otf",
+          "score": 0.5689,
+          "errors": {
+            "width": 1.0,
+            "columns": 0.2783,
+            "rows": 0.4815,
+            "stroke": 0.1872,
+            "chamfer": 0.6942
+          },
+          "size_px": 121
+        }
+      ],
+      "notes": [
+        "frame residue left untouched (depth px): {'top': 0, 'bottom': 0, 'left': 0, 'right': 9}",
+        "glyph tips in the interior edge band removed: 87 px",
+        "frame residue removed (depth px): {'top': 0, 'bottom': 0, 'left': 0, 'right': 9}",
+        "fitted letter spacing -0.080em is large: the OCR text may be wrong or the true font is not installed - treat the font as a poor match",
+        "not separable from: Ubuntu Sans Regular, Open Sans Regular, Open Sans Regular, Noto Sans Light, Montserrat Regular"
+      ],
+      "font_path": "/usr/share/fonts/truetype/ubuntu/Ubuntu-B.ttf",
+      "font_family": "Ubuntu Regular",
+      "font_size": 119,
+      "stroke_width": 0,
+      "synthetic_bold": false,
+      "bold_target": false,
+      "baseline_rel": 88,
+      "font_match_score": 0.54642,
+      "rendered_width_height_ratio": 4.9186,
+      "width_residual_after_tracking": 0.4297,
+      "calibration_confidence": "ambiguous"
+    },
+    {
+      "box_index": 2,
+      "original_text": "V",
+      "font_size_scale": 1.0,
+      "text_color_rgb": [
+        255,
+        255,
+        255
+      ],
+      "background_rgb": [
+        19,
+        57,
+        40
+      ],
+      "original_ink_bbox_relative": [
+        99,
+        81,
+        165,
+        153
+      ],
+      "original_ink_width_px": 66,
+      "original_ink_height_px": 72,
+      "alignment": "center",
+      "contrast": 375.7,
+      "tracking_em": 0.0,
+      "word_spacing_em": 0.0,
+      "alternatives": [
+        {
+          "font_path": "/usr/share/fonts/truetype/noto/NotoSans-SemiBold.ttf",
+          "font_size": 101,
+          "stroke_width": 0,
+          "tracking_em": 0.0,
+          "score": 0.0176
+        },
+        {
+          "font_path": "/usr/share/fonts/truetype/open-sans/OpenSans-Bold.ttf",
+          "font_size": 101,
+          "stroke_width": 0,
+          "tracking_em": 0.0,
+          "score": 0.0188
+        },
+        {
+          "font_path": "/usr/share/fonts/truetype/noto/NotoSans-Bold.ttf",
+          "font_size": 100,
+          "stroke_width": 0,
+          "tracking_em": 0.0,
+          "score": 0.0303
+        }
+      ],
+      "ranking": [
+        {
+          "font": "Carlito Bold",
+          "path": "/usr/share/fonts/truetype/crosextra/Carlito-Bold.ttf",
+          "score": 0.0011,
+          "errors": {
+            "width": 0.0,
+            "columns": 0.0147,
+            "rows": 0.0258,
+            "stroke": 0.1294,
+            "chamfer": 0.0178
+          },
+          "size_px": 111
+        },
+        {
+          "font": "Noto Sans SemiBold",
+          "path": "/usr/share/fonts/truetype/noto/NotoSans-SemiBold.ttf",
+          "score": 0.0176,
+          "errors": {
+            "width": 0.1212,
+            "columns": 0.0153,
+            "rows": 0.0232,
+            "stroke": 0.0426,
+            "chamfer": 0.0162
+          },
+          "size_px": 101
+        },
+        {
+          "font": "Open Sans Bold",
+          "path": "/usr/share/fonts/truetype/open-sans/OpenSans-Bold.ttf",
+          "score": 0.0188,
+          "errors": {
+            "width": 0.0,
+            "columns": 0.0178,
+            "rows": 0.0256,
+            "stroke": 0.2442,
+            "chamfer": 0.0173
+          },
+          "size_px": 101
+        },
+        {
+          "font": "Noto Sans Bold",
+          "path": "/usr/share/fonts/truetype/noto/NotoSans-Bold.ttf",
+          "score": 0.0303,
+          "errors": {
+            "width": 0.0606,
+            "columns": 0.0151,
+            "rows": 0.026,
+            "stroke": 0.2254,
+            "chamfer": 0.0155
+          },
+          "size_px": 100
+        },
+        {
+          "font": "Roboto Medium",
+          "path": "/home/unloved/gambling-cheats/Roboto-Medium.ttf",
+          "score": 0.0324,
+          "errors": {
+            "width": 0.0606,
+            "columns": 0.0098,
+            "rows": 0.0309,
+            "stroke": 0.039,
+            "chamfer": 0.0163
+          },
+          "size_px": 101
+        },
+        {
+          "font": "Roboto Bold",
+          "path": "/home/unloved/gambling-cheats/Roboto-Bold.ttf",
+          "score": 0.0331,
+          "errors": {
+            "width": 0.0,
+            "columns": 0.0159,
+            "rows": 0.0355,
+            "stroke": 0.327,
+            "chamfer": 0.019
+          },
+          "size_px": 101
+        },
+        {
+          "font": "Liberation Sans Bold",
+          "path": "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+          "score": 0.0481,
+          "errors": {
+            "width": 0.1818,
+            "columns": 0.0112,
+            "rows": 0.047,
+            "stroke": 0.1206,
+            "chamfer": 0.0148
+          },
+          "size_px": 104
+        },
+        {
+          "font": "Open Sans Semibold",
+          "path": "/usr/share/fonts/truetype/open-sans/OpenSans-Semibold.ttf",
+          "score": 0.0548,
+          "errors": {
+            "width": 0.1818,
+            "columns": 0.0164,
+            "rows": 0.0222,
+            "stroke": 0.1844,
+            "chamfer": 0.0198
+          },
+          "size_px": 101
+        }
+      ],
+      "notes": [
+        "not separable from: Noto Sans SemiBold, Open Sans Bold"
+      ],
+      "font_path": "/usr/share/fonts/truetype/crosextra/Carlito-Bold.ttf",
+      "font_family": "Carlito Bold",
+      "font_size": 111,
+      "stroke_width": 0,
+      "synthetic_bold": false,
+      "bold_target": true,
+      "baseline_rel": 153,
+      "font_match_score": 0.03108,
+      "rendered_width_height_ratio": 0.9167,
+      "width_residual_after_tracking": 0.0,
+      "calibration_confidence": "ambiguous"
+    },
+    {
+      "box_index": 3,
+      "original_text": "Vikki Valdez",
+      "font_size_scale": 1.0,
+      "text_color_rgb": [
+        255,
+        255,
+        255
+      ],
+      "background_rgb": [
+        13,
+        28,
+        21
+      ],
+      "original_ink_bbox_relative": [
+        3,
+        3,
+        551,
+        98
+      ],
+      "original_ink_width_px": 548,
+      "original_ink_height_px": 95,
+      "alignment": "center",
+      "contrast": 406.0,
+      "tracking_em": 0.0155,
+      "word_spacing_em": 0.0,
+      "alternatives": [
+        {
+          "font_path": "/usr/share/fonts/opentype/fira/firasanscompressed-regular.otf",
+          "font_size": 121,
+          "stroke_width": 0,
+          "tracking_em": 0.0155,
+          "score": 0.2415
+        }
+      ],
+      "ranking": [
+        {
+          "font": "Fira Sans Compressed Medium",
+          "path": "/usr/share/fonts/opentype/fira/FiraSansCompressed-Medium.otf",
+          "score": 0.2225,
+          "errors": {
+            "width": 0.146,
+            "columns": 0.2154,
+            "rows": 0.3185,
+            "stroke": 0.1952,
+            "chamfer": 0.2498
+          },
+          "size_px": 117
+        },
+        {
+          "font": "Fira Sans Compressed Regular",
+          "path": "/usr/share/fonts/opentype/fira/firasanscompressed-regular.otf",
+          "score": 0.2415,
+          "errors": {
+            "width": 0.1095,
+            "columns": 0.1999,
+            "rows": 0.342,
+            "stroke": 0.3087,
+            "chamfer": 0.297
+          },
+          "size_px": 121
+        },
+        {
+          "font": "Fira Sans Compressed SemiBold",
+          "path": "/usr/share/fonts/opentype/fira/FiraSansCompressed-SemiBold.otf",
+          "score": 0.253,
+          "errors": {
+            "width": 0.146,
+            "columns": 0.2331,
+            "rows": 0.3241,
+            "stroke": 0.3616,
+            "chamfer": 0.254
+          },
+          "size_px": 116
+        },
+        {
+          "font": "Fira Sans Compressed Book",
+          "path": "/usr/share/fonts/opentype/fira/firasanscompressed-book.otf",
+          "score": 0.2762,
+          "errors": {
+            "width": 0.146,
+            "columns": 0.2154,
+            "rows": 0.3443,
+            "stroke": 0.4339,
+            "chamfer": 0.3132
+          },
+          "size_px": 121
+        },
+        {
+          "font": "Fira Sans Compressed Bold",
+          "path": "/usr/share/fonts/opentype/fira/FiraSansCompressed-Bold.otf",
+          "score": 0.2991,
+          "errors": {
+            "width": 0.1825,
+            "columns": 0.2755,
+            "rows": 0.3238,
+            "stroke": 0.5417,
+            "chamfer": 0.2618
+          },
+          "size_px": 114
+        },
+        {
+          "font": "Fira Sans Compressed ExtraBold",
+          "path": "/usr/share/fonts/opentype/fira/FiraSansCompressed-ExtraBold.otf",
+          "score": 0.3217,
+          "errors": {
+            "width": 0.1241,
+            "columns": 0.2783,
+            "rows": 0.3125,
+            "stroke": 0.8144,
+            "chamfer": 0.2515
+          },
+          "size_px": 114
+        },
+        {
+          "font": "Fira Sans Medium",
+          "path": "/usr/share/fonts/opentype/fira/FiraSans-Medium.otf",
+          "score": 0.3312,
+          "errors": {
+            "width": 0.5547,
+            "columns": 0.1827,
+            "rows": 0.3345,
+            "stroke": 0.2538,
+            "chamfer": 0.2549
+          },
+          "size_px": 116
+        },
+        {
+          "font": "Noto Sans Display Regular",
+          "path": "/usr/share/fonts/truetype/noto/NotoSansDisplay-Regular.ttf",
+          "score": 0.349,
+          "errors": {
+            "width": 0.5766,
+            "columns": 0.2133,
+            "rows": 0.3244,
+            "stroke": 0.2658,
+            "chamfer": 0.2874
+          },
+          "size_px": 122
+        }
+      ],
+      "notes": [
+        "glyph tips in the interior edge band removed: 121 px",
+        "not separable from: Fira Sans Compressed Regular"
+      ],
+      "font_path": "/usr/share/fonts/opentype/fira/FiraSansCompressed-Medium.otf",
+      "font_family": "Fira Sans Compressed Medium",
+      "font_size": 117,
+      "stroke_width": 0,
+      "synthetic_bold": false,
+      "bold_target": false,
+      "baseline_rel": 96,
+      "font_match_score": 0.22251,
+      "rendered_width_height_ratio": 5.5579,
+      "width_residual_after_tracking": 0.0,
+      "calibration_confidence": "ambiguous"
+    },
+    {
+      "box_index": 4,
+      "original_text": "SVikki-Valdez",
+      "font_size_scale": 1.0,
+      "text_color_rgb": [
+        166,
+        174,
+        171
+      ],
+      "background_rgb": [
+        12,
+        28,
+        21
+      ],
+      "original_ink_bbox_relative": [
+        3,
+        3,
+        486,
+        71
+      ],
+      "original_ink_width_px": 483,
+      "original_ink_height_px": 68,
+      "alignment": "left",
+      "contrast": 259.9,
+      "tracking_em": -0.0431,
+      "word_spacing_em": 0.0,
+      "alternatives": [
+        {
+          "font_path": "/home/unloved/gambling-cheats/Roboto-Regular.ttf",
+          "font_size": 89,
+          "stroke_width": 0,
+          "tracking_em": -0.0431,
+          "score": 0.2586
+        },
+        {
+          "font_path": "/home/unloved/gambling-cheats/fonts/Roboto_wdth_wght_.ttf",
+          "font_size": 89,
+          "stroke_width": 0,
+          "tracking_em": -0.0431,
+          "score": 0.2594
+        }
+      ],
+      "ranking": [
+        {
+          "font": "Nimbus Sans Regular",
+          "path": "/usr/share/fonts/opentype/urw-base35/NimbusSans-Regular.otf",
+          "score": 0.2465,
+          "errors": {
+            "width": 0.381,
+            "columns": 0.1196,
+            "rows": 0.391,
+            "stroke": 0.0624,
+            "chamfer": 0.1987
+          },
+          "size_px": 89
+        },
+        {
+          "font": "Roboto Regular",
+          "path": "/home/unloved/gambling-cheats/Roboto-Regular.ttf",
+          "score": 0.2586,
+          "errors": {
+            "width": 0.3727,
+            "columns": 0.1454,
+            "rows": 0.4001,
+            "stroke": 0.0213,
+            "chamfer": 0.2658
+          },
+          "size_px": 89
+        },
+        {
+          "font": "Roboto Regular",
+          "path": "/home/unloved/gambling-cheats/fonts/Roboto_wdth_wght_.ttf",
+          "score": 0.2594,
+          "errors": {
+            "width": 0.381,
+            "columns": 0.1482,
+            "rows": 0.3988,
+            "stroke": 0.0179,
+            "chamfer": 0.2606
+          },
+          "size_px": 89
+        },
+        {
+          "font": "Arimo Regular",
+          "path": "/home/unloved/gambling-cheats/fonts/Arimo_wght_.ttf",
+          "score": 0.2952,
+          "errors": {
+            "width": 0.5631,
+            "columns": 0.1714,
+            "rows": 0.372,
+            "stroke": 0.026,
+            "chamfer": 0.2093
+          },
+          "size_px": 92
+        },
+        {
+          "font": "Noto Sans Display Regular",
+          "path": "/usr/share/fonts/truetype/noto/NotoSansDisplay-Regular.ttf",
+          "score": 0.3013,
+          "errors": {
+            "width": 0.0828,
+            "columns": 0.4209,
+            "rows": 0.4149,
+            "stroke": 0.1385,
+            "chamfer": 0.4635
+          },
+          "size_px": 87
+        },
+        {
+          "font": "Carlito Regular",
+          "path": "/usr/share/fonts/truetype/crosextra/Carlito-Regular.ttf",
+          "score": 0.3048,
+          "errors": {
+            "width": 0.1988,
+            "columns": 0.4161,
+            "rows": 0.4128,
+            "stroke": 0.049,
+            "chamfer": 0.4097
+          },
+          "size_px": 96
+        },
+        {
+          "font": "Lato Regular",
+          "path": "/home/unloved/gambling-cheats/fonts/Lato-Regular.ttf",
+          "score": 0.3155,
+          "errors": {
+            "width": 0.4224,
+            "columns": 0.2445,
+            "rows": 0.4229,
+            "stroke": 0.0619,
+            "chamfer": 0.3356
+          },
+          "size_px": 91
+        },
+        {
+          "font": "Lato Regular",
+          "path": "/usr/share/fonts/truetype/lato/Lato-Regular.ttf",
+          "score": 0.3155,
+          "errors": {
+            "width": 0.4224,
+            "columns": 0.2445,
+            "rows": 0.4229,
+            "stroke": 0.0619,
+            "chamfer": 0.3356
+          },
+          "size_px": 91
+        }
+      ],
+      "notes": [
+        "glyph tips in the interior edge band removed: 295 px",
+        "not separable from: Roboto Regular, Roboto Regular"
+      ],
+      "font_path": "/usr/share/fonts/opentype/urw-base35/NimbusSans-Regular.otf",
+      "font_family": "Nimbus Sans Regular",
+      "font_size": 89,
+      "stroke_width": 0,
+      "synthetic_bold": false,
+      "bold_target": false,
+      "baseline_rel": 69,
+      "font_match_score": 0.24646,
+      "rendered_width_height_ratio": 7.7794,
+      "width_residual_after_tracking": -0.0021,
+      "calibration_confidence": "ambiguous"
+    },
+    {
+      "box_index": 5,
+      "original_text": "-S5",
+      "font_size_scale": 1.0,
+      "text_color_rgb": [
+        255,
+        255,
+        255
+      ],
+      "background_rgb": [
+        12,
+        28,
+        21
+      ],
+      "original_ink_bbox_relative": [
+        5,
+        3,
+        449,
+        241
+      ],
+      "original_ink_width_px": 444,
+      "original_ink_height_px": 238,
+      "alignment": "center",
+      "contrast": 406.6,
+      "tracking_em": 0.0077,
+      "word_spacing_em": 0.0,
+      "alternatives": [
+        {
+          "font_path": "/usr/share/fonts/opentype/fira/FiraSans-Book.otf",
+          "font_size": 334,
+          "stroke_width": 0,
+          "tracking_em": 0.0077,
+          "score": 0.312
+        },
+        {
+          "font_path": "/home/unloved/gambling-cheats/fonts/Lato-Regular.ttf",
+          "font_size": 323,
+          "stroke_width": 0,
+          "tracking_em": 0.0077,
+          "score": 0.3136
+        },
+        {
+          "font_path": "/usr/share/fonts/truetype/lato/Lato-Regular.ttf",
+          "font_size": 323,
+          "stroke_width": 0,
+          "tracking_em": 0.0077,
+          "score": 0.3136
+        }
+      ],
+      "ranking": [
+        {
+          "font": "Noto Sans Display Black",
+          "path": "/usr/share/fonts/truetype/noto/NotoSansDisplay-Black.ttf",
+          "score": 0.3096,
+          "errors": {
+            "width": 0.045,
+            "columns": 0.1295,
+            "rows": 0.3955,
+            "stroke": 1.0,
+            "chamfer": 0.2168
+          },
+          "size_px": 323
+        },
+        {
+          "font": "Fira Sans Book",
+          "path": "/usr/share/fonts/opentype/fira/FiraSans-Book.otf",
+          "score": 0.312,
+          "errors": {
+            "width": 0.0991,
+            "columns": 0.2899,
+            "rows": 0.6683,
+            "stroke": 0.0864,
+            "chamfer": 0.4129
+          },
+          "size_px": 334
+        },
+        {
+          "font": "Lato Regular",
+          "path": "/home/unloved/gambling-cheats/fonts/Lato-Regular.ttf",
+          "score": 0.3136,
+          "errors": {
+            "width": 0.027,
+            "columns": 0.2615,
+            "rows": 0.7278,
+            "stroke": 0.1801,
+            "chamfer": 0.4096
+          },
+          "size_px": 323
+        },
+        {
+          "font": "Lato Regular",
+          "path": "/usr/share/fonts/truetype/lato/Lato-Regular.ttf",
+          "score": 0.3136,
+          "errors": {
+            "width": 0.027,
+            "columns": 0.2615,
+            "rows": 0.7278,
+            "stroke": 0.1801,
+            "chamfer": 0.4096
+          },
+          "size_px": 323
+        },
+        {
+          "font": "Roboto Regular",
+          "path": "/home/unloved/gambling-cheats/fonts/Roboto_wdth_wght_.ttf",
+          "score": 0.3189,
+          "errors": {
+            "width": 0.018,
+            "columns": 0.3251,
+            "rows": 0.6649,
+            "stroke": 0.2163,
+            "chamfer": 0.4195
+          },
+          "size_px": 324
+        },
+        {
+          "font": "Open Sans Regular",
+          "path": "/usr/share/fonts/truetype/open-sans/OpenSans-Regular.ttf",
+          "score": 0.3191,
+          "errors": {
+            "width": 0.0541,
+            "columns": 0.2535,
+            "rows": 0.7593,
+            "stroke": 0.0242,
+            "chamfer": 0.4968
+          },
+          "size_px": 325
+        },
+        {
+          "font": "Fira Sans Regular",
+          "path": "/usr/share/fonts/opentype/fira/FiraSans-Regular.otf",
+          "score": 0.3192,
+          "errors": {
+            "width": 0.0721,
+            "columns": 0.2731,
+            "rows": 0.6531,
+            "stroke": 0.2635,
+            "chamfer": 0.3819
+          },
+          "size_px": 334
+        },
+        {
+          "font": "Open Sans Regular",
+          "path": "/home/unloved/gambling-cheats/fonts/OpenSans_wdth_wght_.ttf",
+          "score": 0.324,
+          "errors": {
+            "width": 0.0901,
+            "columns": 0.2552,
+            "rows": 0.7605,
+            "stroke": 0.0015,
+            "chamfer": 0.4904
+          },
+          "size_px": 322
+        }
+      ],
+      "notes": [
+        "glyph tips in the interior edge band removed: 1283 px",
+        "not separable from: Fira Sans Book, Lato Regular, Lato Regular, Roboto Regular, Open Sans Regular"
+      ],
+      "font_path": "/usr/share/fonts/truetype/noto/NotoSansDisplay-Black.ttf",
+      "font_family": "Noto Sans Display Black",
+      "font_size": 323,
+      "stroke_width": 0,
+      "synthetic_bold": false,
+      "bold_target": true,
+      "baseline_rel": 237,
+      "font_match_score": 0.30962,
+      "rendered_width_height_ratio": 1.8445,
+      "width_residual_after_tracking": 0.0,
+      "calibration_confidence": "ambiguous"
+    },
+    {
+      "box_index": 6,
+      "original_text": "Jul 28at 345AM",
+      "font_size_scale": 1.0,
+      "text_color_rgb": [
+        166,
+        174,
+        171
+      ],
+      "background_rgb": [
+        12,
+        28,
+        21
+      ],
+      "original_ink_bbox_relative": [
+        5,
+        4,
+        650,
+        69
+      ],
+      "original_ink_width_px": 645,
+      "original_ink_height_px": 65,
+      "alignment": "center",
+      "contrast": 259.9,
+      "tracking_em": 0.0309,
+      "word_spacing_em": 0.0,
+      "alternatives": [
+        {
+          "font_path": "/usr/share/fonts/truetype/lato/Lato-Semibold.ttf",
+          "font_size": 87,
+          "stroke_width": 0,
+          "tracking_em": 0.0309,
+          "score": 0.3438
+        },
+        {
+          "font_path": "/usr/share/fonts/truetype/montserrat/Montserrat-Medium.ttf",
+          "font_size": 86,
+          "stroke_width": 0,
+          "tracking_em": 0.0309,
+          "score": 0.347
+        },
+        {
+          "font_path": "/usr/share/fonts/truetype/montserrat/MontserratAlternates-SemiBold.ttf",
+          "font_size": 76,
+          "stroke_width": 0,
+          "tracking_em": 0.0309,
+          "score": 0.3508
+        }
+      ],
+      "ranking": [
+        {
+          "font": "Lato SemiBold",
+          "path": "/home/unloved/gambling-cheats/fonts/Lato-SemiBold.ttf",
+          "score": 0.3438,
+          "errors": {
+            "width": 0.2171,
+            "columns": 0.5191,
+            "rows": 0.1941,
+            "stroke": 0.1276,
+            "chamfer": 0.6389
+          },
+          "size_px": 87
+        },
+        {
+          "font": "Lato Semibold",
+          "path": "/usr/share/fonts/truetype/lato/Lato-Semibold.ttf",
+          "score": 0.3438,
+          "errors": {
+            "width": 0.2171,
+            "columns": 0.5191,
+            "rows": 0.1941,
+            "stroke": 0.1276,
+            "chamfer": 0.6389
+          },
+          "size_px": 87
+        },
+        {
+          "font": "Montserrat Medium",
+          "path": "/usr/share/fonts/truetype/montserrat/Montserrat-Medium.ttf",
+          "score": 0.347,
+          "errors": {
+            "width": 0.0806,
+            "columns": 0.5814,
+            "rows": 0.1677,
+            "stroke": 0.0446,
+            "chamfer": 0.8516
+          },
+          "size_px": 86
+        },
+        {
+          "font": "Montserrat Alternates SemiBold",
+          "path": "/usr/share/fonts/truetype/montserrat/MontserratAlternates-SemiBold.ttf",
+          "score": 0.3508,
+          "errors": {
+            "width": 0.1302,
+            "columns": 0.4883,
+            "rows": 0.2989,
+            "stroke": 0.2385,
+            "chamfer": 0.6252
+          },
+          "size_px": 76
+        },
+        {
+          "font": "Montserrat Medium",
+          "path": "/usr/share/fonts/opentype/montserrat/Montserrat-Medium.otf",
+          "score": 0.3523,
+          "errors": {
+            "width": 0.0806,
+            "columns": 0.5816,
+            "rows": 0.1897,
+            "stroke": 0.0434,
+            "chamfer": 0.8571
+          },
+          "size_px": 86
+        },
+        {
+          "font": "Lato Bold",
+          "path": "/home/unloved/gambling-cheats/fonts/Lato-Bold.ttf",
+          "score": 0.3539,
+          "errors": {
+            "width": 0.1922,
+            "columns": 0.5142,
+            "rows": 0.1229,
+            "stroke": 0.4117,
+            "chamfer": 0.5835
+          },
+          "size_px": 87
+        },
+        {
+          "font": "Lato Bold",
+          "path": "/usr/share/fonts/truetype/lato/Lato-Bold.ttf",
+          "score": 0.3539,
+          "errors": {
+            "width": 0.1922,
+            "columns": 0.5142,
+            "rows": 0.1229,
+            "stroke": 0.4117,
+            "chamfer": 0.5835
+          },
+          "size_px": 87
+        },
+        {
+          "font": "Lato Medium",
+          "path": "/home/unloved/gambling-cheats/fonts/Lato-Medium.ttf",
+          "score": 0.3556,
+          "errors": {
+            "width": 0.2295,
+            "columns": 0.5365,
+            "rows": 0.2333,
+            "stroke": 0.0453,
+            "chamfer": 0.6877
+          },
+          "size_px": 87
+        }
+      ],
+      "notes": [
+        "not separable from: Lato Semibold, Montserrat Medium, Montserrat Alternates SemiBold, Montserrat Medium, Lato Bold"
+      ],
+      "font_path": "/home/unloved/gambling-cheats/fonts/Lato-SemiBold.ttf",
+      "font_family": "Lato SemiBold",
+      "font_size": 87,
+      "stroke_width": 0,
+      "synthetic_bold": false,
+      "bold_target": true,
+      "baseline_rel": 68,
+      "font_match_score": 0.34384,
+      "rendered_width_height_ratio": 9.3846,
+      "width_residual_after_tracking": 0.0,
+      "calibration_confidence": "ambiguous"
+    }
+  ]
+}

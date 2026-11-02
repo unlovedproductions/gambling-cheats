@@ -1,182 +1,171 @@
-#!/usr/bin/env python3
-# Six typed text blocks. Collects input for each box and renders a labeled
-# preview. Does not load or modify a receipt screenshot.
-
-from datetime import datetime
 import os
-import re
-import sys
-
+import glob
+import cv2
+import numpy as np
+import easyocr
 from PIL import Image, ImageDraw, ImageFont
-import pytz
 
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-OUTPUT_PATH = os.path.join(SCRIPT_DIR, "blocks_preview.png")
-PST = pytz.timezone("US/Pacific")
+# Initialize EasyOCR with symbol detection enabled
+reader = easyocr.Reader(['en'])
 
-AVATAR_RE = re.compile(r"^[A-Za-z]$")
-NAME_RE = re.compile(r"^[A-Za-z]+(?: [A-Za-z]+)*$")
-HANDLE_RE = re.compile(r"^\$[A-Za-z]+(?:-[A-Za-z]+)*$")
-AMOUNT_RE = re.compile(r"^-?\$\d+(?:\.\d{1,2})?$")
-MONTH_DAY_TIME_RE = re.compile(
-    r"^(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) "
-    r"(?:[12]\d|3[01]|0?[1-9]) at (?:1[0-2]|0?[1-9]):[0-5]\d (?:AM|PM)$"
-)
-TIME_12HR_RE = re.compile(r"^(?:1[0-2]|0?[1-9]):[0-5]\d (?:AM|PM)$")
+def get_local_font():
+    """Finds the first .ttf or .otf font file in the script directory."""
+    font_files = glob.glob("*.ttf") + glob.glob("*.otf")
+    if font_files:
+        print(f"Using local font file: {font_files[0]}")
+        return font_files[0]
+    print("Warning: No local font file (.ttf/.otf) found. Falling back to default.")
+    return None
 
+def find_red_boxes(image):
+    """Detects red box contours using HSV color space."""
+    hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
-def get_font(font_name_base, default_size):
-    common_paths = [
-        os.path.join(SCRIPT_DIR, f"{font_name_base}.ttf"),
-        f"{font_name_base}.ttf",
-        f"{font_name_base}-Medium.ttf",
-        f"{font_name_base}-Bold.ttf",
-        f"{font_name_base}-Regular.ttf",
-        f"/usr/share/fonts/truetype/roboto/{font_name_base}.ttf",
-        f"/System/Library/Fonts/{font_name_base}.ttf",
-        f"C:/Windows/Fonts/{font_name_base}.ttf",
-        "arial.ttf",
-        "sans-serif.ttf",
-    ]
-    for path in common_paths:
-        if os.path.exists(path):
-            return ImageFont.truetype(path, default_size)
-    print(
-        f"Warning: Could not find '{font_name_base}.ttf'. Using default PIL font."
+    # Red color range in HSV space (covers wraparound 0-10 and 170-180)
+    lower_red1 = np.array([0, 50, 50])
+    upper_red1 = np.array([10, 255, 255])
+    lower_red2 = np.array([170, 50, 50])
+    upper_red2 = np.array([180, 255, 255])
+
+    mask1 = cv2.inRange(hsv, lower_red1, upper_red1)
+    mask2 = cv2.inRange(hsv, lower_red2, upper_red2)
+    red_mask = mask1 | mask2
+
+    contours, _ = cv2.findContours(red_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+    boxes = []
+    for cnt in contours:
+        x, y, w, h = cv2.boundingRect(cnt)
+        if w > 15 and h > 15:  # Filter out tiny noise
+            boxes.append((x, y, w, h))
+
+    # Sort boxes top-to-bottom, then left-to-right
+    boxes.sort(key=lambda b: (b[1] // 30, b[0]))
+    return boxes
+
+def read_box_text(crop_bgr):
+    """Attempts OCR reading allowing special characters, with graceful fallback."""
+    # Allow numbers, uppercase, lowercase, and common special characters
+    allow_list = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()-_+=[]{}|;:,.<>?/'
+    
+    ocr_results = reader.readtext(
+        crop_bgr, 
+        allowlist=allow_list,
+        paragraph=False
     )
-    return ImageFont.load_default()
+    
+    if ocr_results:
+        # Get recognized text
+        text = ocr_results[0][1].strip()
+        return text if text else "[Unrecognized Characters]"
+    return "[Unrecognized Characters]"
 
+def fit_font_size(font_path, text, target_w, target_h):
+    """Iteratively calculates font point size matching target bounds."""
+    if not font_path:
+        return ImageFont.load_default()
 
-def now_pst():
-    return datetime.now(PST)
+    best_font = ImageFont.truetype(font_path, 10)
 
+    # Step through sizes to find maximum fit within box constraints
+    for sz in range(8, 200):
+        test_font = ImageFont.truetype(font_path, sz)
+        bbox = test_font.getbbox(text)
+        w = bbox[2] - bbox[0]
+        h = bbox[3] - bbox[1]
 
-def default_month_day_time():
-    return now_pst().strftime("%b %-d at %-I:%M %p")
+        if w <= target_w and h <= target_h:
+            best_font = test_font
+        else:
+            break
 
+    return best_font
 
-def default_time_12hr():
-    return now_pst().strftime("%-I:%M %p")
+def process_image(image_path="original.png", output_path="output.png"):
+    if not os.path.exists(image_path):
+        print(f"Error: '{image_path}' not found in directory.")
+        return
 
+    img = cv2.imread(image_path)
+    img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    pil_img = Image.fromarray(img_rgb)
+    draw = ImageDraw.Draw(pil_img)
 
-def prompt_block(label, text_type, example, pattern, default):
-    hint = f"{label} [{text_type}] (e.g. '{example}', Enter for '{default}'): "
-    while True:
-        value = input(hint).strip() or default
-        if pattern.fullmatch(value):
-            return value
-        print(f"Invalid. Expected {text_type}, like '{example}'.")
+    local_font_path = get_local_font()
 
+    boxes = find_red_boxes(img)
+    print(f"\nDetected {len(boxes)} red box(es).")
 
-def get_user_input():
-    print("=== Text block inputs (not a receipt editor) ===")
-    return {
-        "avatar": prompt_block(
-            "1 avatar initial",
-            "letters only",
-            "V",
-            AVATAR_RE,
-            "V",
-        ),
-        "name": prompt_block(
-            "2 display name",
-            "letters only",
-            "Vikki Valdez",
-            NAME_RE,
-            "Vikki Valdez",
-        ),
-        "handle": prompt_block(
-            "3 handle",
-            "special chars and letters",
-            "$Vikki-Valdez",
-            HANDLE_RE,
-            "$Vikki-Valdez",
-        ),
-        "amount": prompt_block(
-            "4 amount",
-            "special chars and numbers",
-            "-$5",
-            AMOUNT_RE,
-            "-$5",
-        ),
-        "month_day_time": prompt_block(
-            "5 month day time",
-            "month day and 12hr time",
-            "Jul 28 at 3:45 AM",
-            MONTH_DAY_TIME_RE,
-            default_month_day_time(),
-        ),
-        "clock": prompt_block(
-            "6 status clock",
-            "12hr time only",
-            "3:45 AM",
-            TIME_12HR_RE,
-            default_time_12hr(),
-        ),
-    }
+    replacements = []
 
+    for idx, (x, y, w, h) in enumerate(boxes, start=1):
+        pad = 4
+        crop_bgr = img[y+pad:y+h-pad, x+pad:x+w-pad]
 
-def render_blocks(blocks):
-    img = Image.new("RGB", (920, 560), (255, 255, 255))
-    draw = ImageDraw.Draw(img)
-    label_font = get_font("Roboto-Regular", 16)
-    type_font = get_font("Roboto-Regular", 14)
+        # Extract text using expanded character whitelist
+        orig_text = read_box_text(crop_bgr)
 
-    rows = [
-        ("1", "letters only", blocks["avatar"], get_font("Roboto-Medium", 22)),
-        ("2", "letters only", blocks["name"], get_font("Roboto-Medium", 22)),
-        (
-            "3",
-            "special chars and letters",
-            blocks["handle"],
-            get_font("Roboto-Regular", 20),
-        ),
-        (
-            "4",
-            "special chars and numbers",
-            blocks["amount"],
-            get_font("Roboto-Bold", 56),
-        ),
-        (
-            "5",
-            "month day and 12hr time",
-            blocks["month_day_time"],
-            get_font("Roboto-Regular", 16),
-        ),
-        (
-            "6",
-            "12hr time only",
-            blocks["clock"],
-            get_font("Roboto-Regular", 14),
-        ),
-    ]
+        # Highlight box in OpenCV window
+        preview = img.copy()
+        cv2.rectangle(preview, (x, y), (x + w, y + h), (0, 255, 0), 3)
 
-    y = 28
-    for number, text_type, text, font in rows:
-        draw.text((24, y), number, fill=(120, 120, 120), font=label_font)
-        draw.text((56, y), text, fill=(0, 0, 0), font=font)
-        bbox = draw.textbbox((56, y), text, font=font)
-        type_y = bbox[3] + 4
-        draw.text((56, type_y), text_type, fill=(140, 140, 140), font=type_font)
-        type_bbox = draw.textbbox((56, type_y), text_type, font=type_font)
-        y = type_bbox[3] + 20
+        window_name = f"Box {idx} of {len(boxes)}"
+        cv2.imshow(window_name, preview)
+        cv2.waitKey(100)
 
-    img.save(OUTPUT_PATH)
-    return OUTPUT_PATH
+        print("=" * 50)
+        print(f" BOX [{idx}/{len(boxes)}]")
+        print(f" ORIGINAL DETECTED VALUE : '{orig_text}'")
+        print(f" Box Position           : (x: {x}, y: {y}) | Size: {w}x{h} px")
+        print("=" * 50)
 
+        user_input = input(f"Enter NEW value for Box #{idx}: ")
+        cv2.destroyWindow(window_name)
 
-def main():
-    blocks = get_user_input()
-    for key, value in blocks.items():
-        print(f"{key}: {value}")
-    path = render_blocks(blocks)
-    print(f"Labeled preview saved to {path}")
-    return True
+        if user_input.strip() != "":
+            replacements.append({
+                "box": (x, y, w, h),
+                "new_text": user_input.strip()
+            })
 
+    cv2.destroyAllWindows()
+
+    WHITE_COLOR = (255, 255, 255)
+
+    # Render replacement text inside detected red boxes
+    for item in replacements:
+        x, y, w, h = item["box"]
+        new_text = item["new_text"]
+
+        pad = 3
+        
+        # Define printable interior target bounds
+        target_h = int(h * 0.70)
+        target_w = int(w * 0.85)
+        
+        font = fit_font_size(local_font_path, new_text, target_w, target_h)
+
+        # Measure rendered string for exact center alignment
+        text_bbox = font.getbbox(new_text)
+        rendered_w = text_bbox[2] - text_bbox[0]
+        rendered_h = text_bbox[3] - text_bbox[1]
+
+        center_x = x + (w // 2)
+        center_y = y + (h // 2)
+
+        text_x = center_x - (rendered_w // 2) - text_bbox[0]
+        text_y = center_y - (rendered_h // 2) - text_bbox[1]
+
+        # Erase old interior by sampling background color inside box
+        bg_sample = img_rgb[y+pad:y+h-pad, x+pad:x+w-pad]
+        bg_color = tuple(np.median(bg_sample, axis=(0, 1)).astype(int))
+        draw.rectangle([x + pad, y + pad, x + w - pad, y + h - pad], fill=bg_color)
+
+        # Draw replacement text in pure white
+        draw.text((text_x, text_y), new_text, fill=WHITE_COLOR, font=font)
+
+    pil_img.save(output_path)
+    print(f"\nProcessing complete! Output saved to: {output_path}")
 
 if __name__ == "__main__":
-    try:
-        sys.exit(0 if main() else 1)
-    except (EOFError, KeyboardInterrupt):
-        print("\nAborted.")
-        sys.exit(1)
+    process_image()
